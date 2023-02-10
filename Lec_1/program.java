@@ -14,8 +14,12 @@ package Lec_1;
 */
 
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.*;
+
 class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args)  throws Exception {   // throws Exception указание на то, что может быть ошибка, например при try catch
         short age = 10;
         int salary = 123456;
         System.out.println(age); // 10
@@ -269,6 +273,101 @@ class Program {
         // ● цикл do while;
         // ● цикл for; и его модификация for in
 
+
+        // ● цикл while;
+        int value = 321;
+        int count = 0;
+        while (value != 0) {
+        value /= 10;
+        count++;
+        }
+        System.out.println(count);
+
+
+        // ● цикл do while;
+        int value1 = 321;
+        int count1 = 0;
+        do {
+            value1 /= 10;
+            count++;
+        } while (value1 != 0);
+        System.out.println(count1);
+
+
+        // continue, break
+        // Операторы для управления циклами — continue и break.
+        // Выполнение следующей итерации цикла — continue.
+        // Прерывание текущей итерации цикла — break.
+        // * ближайшего к оператору
+
+
+        // ● цикл for
+        int sq = 0;
+        for (int iq = 1; iq <= 10; iq++) {
+            sq += iq;
+        }
+        System.out.println(sq);
+
+
+        //Вложенные циклы
+
+        for (int ij = 0; ij < 5; ij++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        // * * * * *
+        // * * * * *
+        // * * * * *
+        // * * * * *
+        // * * * * *
+
+
+        // Работает только для коллекций
+        int arr1[] = new int[10];
+        for (int item : arr1) {
+            System.out.printf("%d ", item);
+        }
+        System.out.println();
+
+
+        // Работа с файлами
+
+        try (FileWriter fw = new FileWriter("file.txt", false)) {
+            fw.write("line 1");
+            fw.append('\n');
+            fw.append("line 2");
+            fw.append('\n');
+            fw.write("line 3");
+            fw.append('\n');
+            fw.write("line 4");
+            fw.flush();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+            }
+           
+
+        // Чтение, Вариант посимвольно
+        FileReader f = new FileReader("file.txt");
+        int c11;
+        while ((c11 = f.read()) != -1) {
+        char ch11 = (char) c11;
+        if (ch11 == '\n') {
+            System.out.print(ch11);
+        } else {
+            System.out.print(ch11);
+        }
+        }
+
+
+        // Вариант построчно
+        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        String str;
+        while ((str = br.readLine()) != null) {
+            System.out.printf("== %s ==\n", str);
+        }
+        br.close();
 
 
 
