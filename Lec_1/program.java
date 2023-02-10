@@ -13,6 +13,7 @@ package Lec_1;
 ...
 */
 
+import java.util.Scanner;
 class Program {
     public static void main(String[] args) {
         short age = 10;
@@ -147,10 +148,70 @@ class Program {
         System.out.println(i); // 3
         byte b = Byte.parseByte("123");
         System.out.println(b); // 123
-        b = Byte.parseByte("1234");
-        System.out.println(b); // NumberFormatException: Value out of range
+        // b = Byte.parseByte("1234");
+        // System.out.println(b); // NumberFormatException: Value out of range
+
+        // int[] a_array = new int[10];
+        // double[] d_array = a_array; // ИЗУЧАЕМ ковариантность и контравариантность - так не сработает, в double нельзя положить int
 
 
+
+        // Получение данных из терминала - от пользователя
+        Scanner iScanner = new Scanner(System.in);
+        System.out.printf("name: ");
+        String name = iScanner.nextLine();
+        System.out.printf("Привет, %s!", name);
+        iScanner.close();
+
+
+        // // Некоторые примитивы
+        // Scanner iScanner_1 = new Scanner(System.in);
+        // System.out.printf("int a: ");
+        // int x = iScanner_1.nextInt();
+        // System.out.printf("double a: ");
+        // double y = iScanner_1.nextDouble();
+        // System.out.printf("%d + %f = %f", x, y, x + y);
+        // iScanner_1.close();
+
+        // Scanner iScanner_2 = new Scanner(System.in);
+        // System.out.printf("int a: ");
+        // boolean flag = iScanner_2.hasNextInt(); // если пользователь банан и вместо цифр ввел буквы hasNextInt() пробует преобразовать в int и если нет - не вывалится ошибка
+        // System.out.println(flag);
+        // int i = iScanner_2.nextInt();
+        // System.out.println(i);
+        // iScanner.close();
+        
+
+        // Форматированный вывод
+        int a_a = 1, b_b = 2;
+        int c = a_a + b_b;
+        String res = a_a + " + " + b_b + " = " + c;
+        System.out.println(res);
+
+        // Форматированный вывод
+        // int a = 1, b = 2;
+        // int c = a + b;
+        // String res = String.format("%d + %d = %d \n", a, b, c);
+        // System.out.printf("%d + %d = %d \n", a, b, c);
+        // System.out.println(res);
+
+        // Виды спецификаторов
+        // %d: целочисленных значений
+        // %x: для вывода шестнадцатеричных чисел
+        // %f: для вывода чисел с плавающей точкой
+        // %e: для вывода чисел в экспоненциальной форме,например, 3.1415e+01
+        // %c: для вывода одиночного символа
+        // %s: для вывода строковых значений
+
+
+        // спецификаторы
+        float pi2 = 3.1415f;
+        System.out.printf("%f\n", pi2); // 3,141500
+        System.out.printf("%.2f\n", pi2); // 3,14
+        System.out.printf("%.3f\n", pi2); // 3,141
+        System.out.printf("%e\n", pi2); // 3,141500e+00
+        System.out.printf("%.2e\n", pi2); // 3,14e+00
+        System.out.printf("%.3e\n", pi2); // 3,141e+00
 
     }
 
