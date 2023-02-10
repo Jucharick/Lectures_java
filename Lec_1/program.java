@@ -213,9 +213,81 @@ class Program {
         System.out.printf("%.2e\n", pi2); // 3,14e+00
         System.out.printf("%.3e\n", pi2); // 3,141e+00
 
+
+        // Функции и методы
+        // Функции и методы — это технически одно и то же. Функции могут
+        // не принадлежать классам, а методы принадлежат.
+        // В java все функции являются методами.
+
+        sayHi(); // hi!
+        System.out.println(sum(1, 3)); // 4
+        System.out.println(factor(5)); // 120.0
+        
+
+        // условный оператор
+        int ao = 1;
+        int bo = 2;
+        int co;
+        if (ao > bo) {
+            co = ao;
+        } else {
+            co = bo;
+        }
+        // if (a > b) c = a;
+        // if (b > a) c = b;
+        System.out.println(co);
+
+
+        // тернарный оператор
+        int at = 1;
+        int bt = 2;
+        int min = at < bt ? at : bt;
+        System.out.println(min);
+
+
+        // Оператор выбора
+        int mounth = 1;
+        String text = "";
+        switch (mounth) {
+            case 1:
+            text = "Autumn";
+            break;
+        
+            default:
+            text = "mistake";
+            break;
+        }
+        System.out.println(text);
+        iScanner.close();
+       
+
+        // Циклы
+        // Цикл — это многократное выполнение одинаковой
+        // последовательности действий.
+        // В java доступны следующие циклы:
+        // ● цикл while;
+        // ● цикл do while;
+        // ● цикл for; и его модификация for in
+
+
+
+
     }
 
+    static void sayHi() {
+        System.out.println("hi!");
+    }
 
+    static int sum(int a, int b) {
+        return a+b;
+    }
+
+    static double factor(int n) {
+        if(n==1)return 1;
+            return n * factor(n-1);
+    }
+
+        
 
     static String getType(Object o){
         return o.getClass().getSimpleName();
