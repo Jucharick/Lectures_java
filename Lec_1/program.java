@@ -334,7 +334,7 @@ class Program {
 
         // Работа с файлами
 
-        try (FileWriter fw = new FileWriter("file.txt", false)) {
+        try (FileWriter fw = new FileWriter("Lec_1/file.txt", false)) {
             fw.write("line 1");
             fw.append('\n');
             fw.append("line 2");
@@ -342,6 +342,8 @@ class Program {
             fw.write("line 3");
             fw.append('\n');
             fw.write("line 4");
+            fw.append('\n');
+            fw.write("line 5");
             fw.flush();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
@@ -349,9 +351,9 @@ class Program {
            
 
         // Чтение, Вариант посимвольно
-        FileReader f = new FileReader("file.txt");
+        FileReader f12 = new FileReader("Lec_1/file.txt");
         int c11;
-        while ((c11 = f.read()) != -1) {
+        while ((c11 = f12.read()) != -1) {
         char ch11 = (char) c11;
         if (ch11 == '\n') {
             System.out.print(ch11);
@@ -360,9 +362,10 @@ class Program {
         }
         }
 
+        System.out.println();
 
         // Вариант построчно
-        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("Lec_1/file.txt"));
         String str;
         while ((str = br.readLine()) != null) {
             System.out.printf("== %s ==\n", str);
