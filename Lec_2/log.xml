@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2023-02-12T18:40:41.816435900Z</date>
-  <millis>1676227241816</millis>
-  <nanos>435900</nanos>
+  <date>2023-02-19T17:25:57.358802100Z</date>
+  <millis>1676827557358</millis>
+  <nanos>802100</nanos>
   <sequence>0</sequence>
   <logger>Lec_2.Ex005_Logger</logger>
   <level>WARNING</level>
@@ -14,9 +14,9 @@
   <message>Тестовое логирование 1</message>
 </record>
 <record>
-  <date>2023-02-12T18:40:41.876265400Z</date>
-  <millis>1676227241876</millis>
-  <nanos>265400</nanos>
+  <date>2023-02-19T17:25:57.431737400Z</date>
+  <millis>1676827557431</millis>
+  <nanos>737400</nanos>
   <sequence>1</sequence>
   <logger>Lec_2.Ex005_Logger</logger>
   <level>INFO</level>
