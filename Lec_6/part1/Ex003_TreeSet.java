@@ -1,3 +1,8 @@
+// TreeSet
+// ● В основе HashMap.
+// ● Упорядочен по возрастанию.
+// ● null’ов быть не может.
+
 package Lec_6.part1;
 
 import java.util.*;
