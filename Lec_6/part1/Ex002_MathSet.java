@@ -25,3 +25,9 @@ public class Ex002_MathSet {
         System.out.println(a.addAll(b));
     }
 }
+
+// first()
+// last()
+// headSet(E)
+// tailSet(E)
+// subSet(E1, E2)
