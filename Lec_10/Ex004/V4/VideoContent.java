@@ -1,4 +1,4 @@
-package Lec_11.Ex004.V4;
+package Lec_10.Ex004.V4;
 
 public class VideoContent extends Content {
     public VideoContent(String name) {
