@@ -1,4 +1,4 @@
-package Lec_12.Ex002Phonebook.Core.Models;
+package Lec_11.Ex002Phonebook.Core.Models;
 
 import java.time.LocalDate;
 

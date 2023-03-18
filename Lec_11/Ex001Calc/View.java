@@ -1,4 +1,4 @@
-package Lec_12.Ex001Calc;
+package Lec_11.Ex001Calc;
 
 import java.util.Scanner;
 
